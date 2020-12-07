@@ -1,0 +1,24 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap");
+
+/* font-family: 'Open Sans', sans-serif; */
+/* variables */
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* Mobile breakpoints */
+$xx-small: 360px;
+$extra-small: 480px;
+$small: 576px;
+$medium: 768px;
+$large: 992px;
+$extra-large: 1200px;
+
+/* colors */
+$color-cosmic-green: #17DAA3;
+
+/* border-radius */
+$border-radius-main: 20px;

@@ -1,0 +1,276 @@
+/* splash */
+.splash {
+  background: url(https://i.postimg.cc/6qhkzVTT/aurora-borealis-photo-1933318.jpg);
+  height: 100vh;
+  width: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  color: white;
+}
+
+.splash::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 0;
+}
+
+.splash .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  @include flex;
+  padding-top: 25px;
+}
+
+.splash a {
+  color: white;
+}
+
+.navigation {
+  @include flex;
+  @include flex-align(space-between, center);
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  font-size: 12px;
+  width: 100%;
+  position: relative;
+}
+
+.logo {
+  -ms-flex-preferred-size: 30%;
+  flex-basis: 30%;
+  font-size: 25px;
+}
+
+.logo span {
+  color: #17DAA3;
+}
+
+.logo a {
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+  border: none;
+  border-radius: 50px;
+  padding: 10px 15px 10px 15px;
+}
+
+.logo a:hover {
+  border: none;
+  color: #17DAA3;
+  -webkit-box-shadow: 0 0 25px white;
+  box-shadow: 0 0 25px white;
+}
+
+i.fa-bars,
+i.fa-times {
+  position: fixed;
+  background-color: #000;
+  width: 60px;
+  height: 60px;
+  line-height: 60px;
+  display: none;
+  font-size: 35px;
+  right: 15px;
+  text-align: center;
+  border-radius: 20px;
+  z-index: 2;
+  box-shadow: 0 0 10px #17DAA3;
+}
+
+.navigation ul {
+  @include flex;
+  @include flex-align(flex-end, center);
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  text-transform: uppercase;
+  -ms-flex-preferred-size: 60%;
+  flex-basis: 70%;
+  margin: 0 20px;
+}
+
+.navigation ul li {
+  margin-right: 20px;
+}
+
+.navigation ul li:nth-last-of-type(1) {
+  margin-right: 0;
+}
+
+.splash-inner {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+  width: 80%;
+}
+
+.splash-inner h1 {
+  font-size: 66px;
+  font-weight: lighter;
+  letter-spacing: 7px;
+  line-height: 1.2;
+}
+
+.splash-inner span {
+  font-weight: 700;
+  letter-spacing: 3px;
+}
+
+.splash-inner h2 {
+  font-size: 24px;
+  font-weight: 400;
+  letter-spacing: 3px;
+  line-height: 1.2;
+  margin-top: 25px;
+  margin-bottom: 50px;
+}
+
+
+@media all and (max-width: $large) {
+  .navigation ul {
+    margin: 0 20px 0 auto;
+
+    li {
+      margin-right: 10px;
+    }
+  }
+}
+
+
+/* NIE RUSZAC */
+@media all and (max-width: $medium) {
+
+  .splash-inner h1 {
+    font-size: 50px;
+  }
+
+  i.fa-bars {
+    display: block;
+  }
+
+  i.fa-bars.hide {
+    display: none;
+  }
+
+  i.fa-times.show {
+    display: block;
+  }
+
+  .navigation ul {
+    display: none;
+    position: fixed;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+    width: 300px;
+    height: auto;
+    top: 80px;
+    right: 15px;
+    margin: 0;
+    padding: 20px;
+    background-color: #000;
+    box-shadow: 0px 0px 25px #17DAA3;
+    border-radius: $border-radius-main;
+    text-align: right;
+    z-index: 2;
+
+  
+    li {
+      margin: 10px 0;
+      padding: 0;
+
+      a {
+        margin: 0;
+        // padding: 0;
+        font-size: 24px;
+      }
+    }
+
+  }
+}
+
+@media all and (max-width: $small) {
+
+  .splash-inner {
+    width: 90%;
+
+    h1 {
+    font-size: 42px;
+    letter-spacing: 0;
+    }
+  }
+}
+
+@media all and (max-width: $extra-small) {
+  .splash-inner {
+
+    h1 {
+      margin-bottom: 20px;
+      font-size: 36px;
+
+      span {
+        letter-spacing: 0;
+      }
+    }
+    
+    
+  }
+
+}
+
+
+/* animacje do hamburgera */
+// @keyframes menu-animation {
+//   0% {
+//     height: 0;
+//     right: 5px;
+//     margin: 0;
+//     padding: 0 20px 0 20px;
+//     display: block;
+//   }
+
+//   100% {
+//     height: 200px;
+//     margin: 0;
+//     padding: 0 20px 20px 20px;
+//     right: 5px;
+//     display: block;
+//   }
+// }
+
+// .menu-animation {
+//   animation-name: menu-animation;
+//   animation-duration: 1s;
+// }
+
+// @keyframes menu-animation-rev {
+//    0% {
+//      height: 200px;
+//      margin: 0;
+//      padding: 0 20px 20px 20px;
+//      right: 5px;
+//    }
+
+//    100% {
+//      height: 0;
+//      right: 5px;
+//      margin: 0;
+//      padding: 0 20px 0 20px;
+//    }
+// }
+
+// .menu-animation-rev {
+//   animation-name: menu-animation-rev;
+//   animation-duration: 1s;
+// }
+

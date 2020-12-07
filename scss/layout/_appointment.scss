@@ -1,0 +1,164 @@
+.appointment {
+  background-image: url(https://i.postimg.cc/TP50h8t6/pexels-tobias-bj-rkli-2113565.jpg);
+  background-position: center;
+  background-size: cover;
+  background-color: no-repeat;
+
+  h3 {
+    color: #fff;
+  }
+
+  form {
+    margin: 0 auto;
+    width: 100%;
+    height: auto;
+    padding: 80px 40px;
+    @include flex;
+    justify-content: center;
+    align-items: space-between;
+    flex-wrap: wrap;
+    flex-direction: row;
+
+
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"],
+    textarea[name="message"] {
+      flex-basis: 49%;
+      margin-top: 20px;
+      margin-bottom: 20px;
+      padding: 30px 15px;
+      box-shadow: 0px 0px 25px $color-cosmic-green;
+      outline-color: $color-cosmic-green;
+      outline-style: inherit;
+      color: $color-cosmic-green;
+      background-color: #000;
+      background: #000;
+      font-size: 18px;
+      border: 2px solid $color-cosmic-green;
+      border-radius: $border-radius-main;
+
+      &::placeholder {
+        color: $color-cosmic-green;
+      }
+
+      &::internal-autofill-selected {
+        background-color: #000;
+      }
+    }
+
+    input:-webkit-autofill,
+    input:-webkit-autofill:hover,
+    input:-webkit-autofill:focus,
+    textarea:-webkit-autofill,
+    textarea:-webkit-autofill:hover,
+    textarea:-webkit-autofill:focus,
+    select:-webkit-autofill,
+    select:-webkit-autofill:hover,
+    select:-webkit-autofill:focus {
+      -webkit-box-shadow: 0 0 0 1000px black inset !important;
+      -webkit-text-fill-color: $color-cosmic-green !important;
+
+      &:-webkit-autofill::first-line {
+        font-size: 18px;
+      }
+    }
+
+    input[type="text"],
+    select[name="service"] {
+      margin-right: 10px;
+    }
+
+    textarea[name="message"] {
+      flex-basis: 100%;
+      margin: 20px 20%;
+      min-height: 200px;
+    }
+
+    .appointment-message {
+      width: 50%;
+      display: none;
+      margin: 20px 25%;
+
+
+      /* start code: failure-animation */
+      @keyframes failure-animation {
+        0% {
+          color: $color-cosmic-green;
+          box-shadow: 0 0 50px #17DAA3;
+          border-color: #17DAA3;
+        }
+
+        50% {
+          color: #fff;
+          box-shadow: 0 0 50px #17DAA3;
+          border-color: #fff;
+        }
+
+        100% {
+          color: $color-cosmic-green;
+          box-shadow: 0 0 50px #17DAA3;
+        }
+
+      }
+
+      /* finish code: failure-animation */
+
+      &.failure {
+        color: $color-cosmic-green;
+        background-color: #000;
+        border: 2px solid $color-cosmic-green;
+        border-radius: $border-radius-main;
+        display: block;
+        padding: 30px 15px;
+        font-size: 18px;
+        text-transform: uppercase;
+        text-align: center;
+        animation-name: failure-animation;
+        animation-duration: 2s;
+        animation-iteration-count: infinite;
+      }
+
+      &.send {
+        color: #fff;
+        display: block;
+        color: #fff;
+        background-color: $color-cosmic-green;
+        border: 2px solid $color-cosmic-green;
+        border-radius: $border-radius-main;
+        display: block;
+        padding: 30px 15px;
+        font-size: 20px;
+        text-transform: uppercase;
+        text-align: center;
+      }
+    }
+
+  }
+
+  @media all and (max-width: $medium) {
+    form {
+
+      input[type="text"],
+      input[type="email"],
+      input[type="tel"],
+      textarea[name="message"] {
+        flex-basis: 100%;
+        margin: 20px auto;
+      }
+    }
+  }
+
+  @media all and (max-width: $small) {
+    form {
+      padding: 5px;
+      
+      input[type="text"],
+      input[type="email"],
+      input[type="tel"],
+      textarea[name="message"] {
+        font-size: 16px;
+      }
+    }
+  }
+}

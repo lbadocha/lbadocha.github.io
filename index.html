@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Presentation website</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+  <header class="splash">
+    <div class="container">
+      <nav class="navigation">
+        <div class="logo">
+          <a class="logo" href="#">Programmer<span>.</span></a>
+        </div>
+        <i id="hamburger" class="fas fa-bars"></i>
+        <i id="times" class="fas fa-times"></i>
+        <ul id="menu-open">
+
+          <li class="menu-item"><a href="#about" class="main-nav-btn">about me</a></li>
+          <li class="menu-item"><a href="#technologies" class="main-nav-btn">technologies</a></li>
+          <li class="menu-item"><a href="#projects" class="main-nav-btn">projects</a></li>
+          <li class="menu-item"><a href="#" class="main-nav-btn">hobby</a></li>
+          <li class="menu-item"><a href="#appointment" class="main-nav-btn">contact</a></li>
+        </ul>
+      </nav>
+      <div class="splash-inner">
+        <h1 class="page-title"><span>Mariusz Rozycki</span> - frontend developer</h1>
+        <h2 class="page-subtitle">portfolio website</h2>
+        <a href="#" class="btn">Learn more</a>
+      </div>
+    </div>
+  </header>
+
+  <section id="about" class="about">
+    <div class="container">
+      <h3>About me</h3>
+      <div class="emphasis-line"></div>
+      <div class="wrapper-about-description">
+        <div class="wrapper-flex">
+          <div class="about-img-description-wrapper">
+            <img src="img/profile-pict.jpg" alt="me">
+          </div>
+          <div class="about-img-description-wrapper">
+            <img src="img/profile-pict-2.jpg" alt="me">
+          </div>
+          <div class="about-img-description-wrapper">
+            <img src="img/profile-pict-3.jpg" alt="me">
+          </div>
+          <div class="about-img-description-wrapper">
+          </div>
+        </div>
+        <div class="about-description-height">
+          <p class="about-description">Hi! My name is Mariusz Grzegorz Rozycki. I live in Norway since 2008. I have
+            studied education in Poland since 2003 - 2008. In 2008 I have moved to Norway and started to live here. <span class="mobile-hidden"> At
+            the
+            begining I worked in restaurant, later - I mean from 2012 I've startet to work as buss driver and instructor
+            for buss drivers, but all of those proffesions was boring:) In 2018 i got interesed of building websites,
+            web
+            applications. Now in 2020 in december I've almost finished course for programmers where i studied HTML, CSS,
+            JavaScript, Jquery and React. I wish to begin work in some IT company, where will I get possibility to start
+            my carrer in IT. I wish to show YOU i've got potential to build interesting projects.</span></p>
+        </div>
+        <button class="show-more">Show more</button>
+      </div>
+    </div>
+  </section>
+
+  <section id="technologies" class="technologies">
+    <div class="container">
+
+      <h3 class="technologies-title change-icon-color change-background-color1">Technoligies I work with</h3>
+
+      <div class="wrapper-all-icons animation">
+
+        <div class="wrapper-icon wrapper-icon-html change-background-color1 animation-icons">
+          <i class="fab fa-html5 project-icon change-icon-color"></i>
+        </div>
+
+        <div class="wrapper-icon wrapper-icon-css change-background-color2">
+          <i class="fab fa-css3-alt project-icon change-icon-color"></i>
+        </div>
+
+        <div class="wrapper-icon wrapper-icon-js change-background-color3">
+          <i class="fab fa-js project-icon change-icon-color"></i>
+        </div>
+
+        <div class="wrapper-icon wrapper-icon-react change-background-color4">
+          <i class="fab fa-react project-icon change-icon-color"></i>
+        </div>
+
+        <div class="wrapper-icon wrapper-icon-git change-background-color5">
+          <i class="fab fa-git project-icon change-icon-color"></i>
+        </div>
+
+        <div class="wrapper-icon wrapper-icon-wp change-background-color6">
+          <i class="fab fa-wordpress project-icon change-icon-color"></i>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section id="projects" class="projects">
+    <div class="container">
+      <h3>Projects</h3>
+      <div class="emphasis-line"></div>
+      <ul class="wrapper-all-projects">
+        <li><i
+            class="fas fa-arrow-right move-to-right-1"></i><a href="http://olenasbeautyoslo.com/" target="_blank">http://olenasbeautyoslo.com/</a>
+        </li>
+        <li><i
+            class="fas fa-arrow-right move-to-right-2"></i><a href="">MariuszRozycki.github.io/zadanie-dodatkowe/kalkulator/</a>
+        </li>
+        <li><i class="fas fa-arrow-right move-to-right-1"></i><a href="">https://repl.it/@mariansc83/delta#script.js</a>
+        </li>
+        <li><i
+            class="fas fa-arrow-right move-to-right-2"></i><a href="">https://mariuszrozycki.github.io/creatively/</a>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="appointment" class="appointment">
+    <div class="container">
+      <h3>Contact me</h3>
+      <div class="emphasis-line"></div>
+      <form id="appointment-form" action="https://formspree.io/f/xnqogare" method="POST">
+        <input type="text" name="name" placeholder="Name" id="appointment-name" class="form-field">
+        <input type="email" name="_replyto" placeholder="Email" id="appointment-email" class="form-field">
+
+        <input type="text" name="city" placeholder="City" id="appointment-city" class="form-field">
+
+        <input type="tel" name="phone" placeholder="Phone" id="appointment-phone" class="form-field">
+
+        <textarea name="message" id="appointment-message" placeholder="Your note" class="form-field"></textarea>
+        <button type="submit" class="btn-form" value="Send">Make an appointment</button>
+        <p class="appointment-message"></p>
+
+      </form>
+    </div>
+  </section>
+
+  <script src="https://kit.fontawesome.com/136bcbc643.js" crossorigin="anonymous"></script>
+  <!-- <script src="js/script-not-ready.js"></script> -->
+  <script src="js/jquery-3.5.1.min.js"></script>
+  <script src="js/script.js"></script>
+</body>
+
+</html>
